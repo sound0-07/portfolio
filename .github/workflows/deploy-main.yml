@@ -21,16 +21,20 @@ jobs:
           node-version: "20"
 
       - name: Install yarn
-        run: npm install yarn -g
+        run: |
+          cd my-blog
+          npm install yarn -g
 
       - name: Clean up node_modules and .next
         run: |
           echo "Cleaning up node_modules and .next..."
+          cd my-blog
           Remove-Item -Recurse -Force node_modules
           Remove-Item -Recurse -Force .next
 
       - name: Install dependencies
         run: |
+          cd my-blog
           yarn install
           
       - name: Build my-blog
