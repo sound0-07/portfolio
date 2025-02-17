@@ -10,29 +10,8 @@ jobs:
     runs-on: [self-hosted, Windows, x64]
 
     steps:
-      - name: Check and install Git LFS
-        run: |
-          if ! git lfs --version; then
-            echo "Git LFS is not installed. Installing..."
-            sudo apt-get update
-            sudo apt-get install -y git-lfs
-          else
-            echo "Git LFS is already installed."
-          fi
-
-          if [ ! -d "$HOME/.git-lfs" ]; then
-            echo "Initializing Git LFS..."
-            export HOME=/home/runner
-            mkdir -p "$HOME"
-            git lfs install --force
-          else
-            echo "Git LFS is already initialized."
-          fi
-
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          lfs: true
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -46,21 +25,13 @@ jobs:
         run: |
           echo "Cleaning up node_modules..."
           rm -rf node_modules/
-          rm -rf apps/experience/dist/
-          rm -rf apps/reservation/dist/
-          rm -rf apps/cxp/dist/
 
       - name: Install dependencies
         run: |
           yarn install
-
-      #- name: Creating .env file
-        #run: |
-          #cat <<EOT > .env
-          #${{ secrets.ENV }}
-          #EOT
           
       - name: Build my-blog
         run: |
           export NODE_OPTIONS="--max-old-space-size=4096"
           yarn my-blog build
+
