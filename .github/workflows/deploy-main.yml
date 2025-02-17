@@ -29,7 +29,6 @@ jobs:
           
       - name: Build my-blog
         run: |
-          export NODE_OPTIONS="--max-old-space-size=4096"
           yarn my-blog build
 
       - name: Deploy to GitHub Pages
