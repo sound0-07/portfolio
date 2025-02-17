@@ -21,11 +21,6 @@ jobs:
       - name: Install yarn
         run: npm install yarn -g
 
-      - name: Clean up node_modules
-        run: |
-          echo "Cleaning up node_modules..."
-          rm -rf node_modules/
-
       - name: Install dependencies
         run: |
           yarn install
@@ -35,3 +30,13 @@ jobs:
           export NODE_OPTIONS="--max-old-space-size=4096"
           yarn my-blog build
 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ secrets.PAGE_URL }}
+    runs-on: [self-hosted, Windows, x64]
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
