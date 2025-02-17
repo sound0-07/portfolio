@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, linux, x64]
+    runs-on: [self-hosted, Windows, x64]
 
     steps:
       - name: Check and install Git LFS
