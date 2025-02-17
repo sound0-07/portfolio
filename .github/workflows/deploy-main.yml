@@ -32,13 +32,8 @@ jobs:
           export NODE_OPTIONS="--max-old-space-size=4096"
           yarn my-blog build
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ secrets.PAGE_URL }}
-    runs-on: [self-hosted, Windows, x64]
-    needs: build
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          url: ${{ secrets.PAGE_URL }}
