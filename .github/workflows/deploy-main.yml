@@ -26,8 +26,8 @@ jobs:
       - name: Clean up node_modules and .next
         run: |
           echo "Cleaning up node_modules and .next..."
-          rmdir /s /q node_modules
-          rmdir /s /q .next
+          Remove-Item -Recurse -Force node_modules
+          Remove-Item -Recurse -Force .next
 
       - name: Install dependencies
         run: |
