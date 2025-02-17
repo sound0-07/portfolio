@@ -29,7 +29,7 @@ jobs:
           
       - name: Build my-blog
         run: |
-          cd ./blog-front-end/my-blog
+          cd ccc
           yarn build
 
       - name: Deploy to GitHub Pages
