@@ -29,7 +29,8 @@ jobs:
           
       - name: Build my-blog
         run: |
-          yarn my-blog build
+          cd my-blog
+          yarn build
 
       - name: Deploy to GitHub Pages
         id: deployment
