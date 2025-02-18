@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, Windows, x64]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -40,21 +40,21 @@ jobs:
         with:
           path: my-blog/build
   
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{steps.deployment.outputs.page_url}}
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{steps.deployment.outputs.page_url}}
 
-    runs-on: [self-hosted, Windows, x64]
+  #   runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
+  #   permissions:
+  #     contents: write
+  #     pages: write
+  #     id-token: write
 
-    needs: build
+  #   needs: build
 
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
