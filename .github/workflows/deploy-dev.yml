@@ -30,6 +30,15 @@ jobs:
         run: |
           cd my-blog
           yarn build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        id: deployment
+        uses: actions/upload-pages-artifact
+        with:
+          path: my-blog/build
   
   deploy:
     environment:
