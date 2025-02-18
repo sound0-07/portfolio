@@ -43,7 +43,7 @@ jobs:
 
       - name: Upload artifact
         id: deployment
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact
         with:
           path: my-blog
   
