@@ -7,6 +7,12 @@ on:
     branches: 
       - main
 
+permissions:
+  actions: read
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: [self-hosted, Windows, x64]
@@ -36,6 +42,7 @@ jobs:
           yarn build
 
       - name: Upload artifact
+        id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
           path: my-blog/build
@@ -45,10 +52,6 @@ jobs:
       name: github-pages
       url: ${{steps.deployment.outputs.page_url}}
     runs-on: [self-hosted, Windows, x64]
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
     needs: build
     steps:
       - name: Deploy to GitHub Pages
