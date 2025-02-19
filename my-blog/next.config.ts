@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   output: 'export',
   distDir: 'build',
-  basePath: '/blog-front-end',
+  basePath: isProduction ? '/blog-front-end': '',
 };
 
 export default nextConfig;
