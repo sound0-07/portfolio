@@ -20,9 +20,6 @@ export const metadata: Metadata = {
     template: '%s | Sound',
   },
   description: 'Sound Blog',
-  icons: {
-    icon: '/favicon.ico',
-  },
 };
 
 export default function RootLayout({
