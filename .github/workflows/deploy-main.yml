@@ -22,17 +22,14 @@ jobs:
 
       - name: Install yarn
         run: |
-          cd my-blog
           npm install yarn -g
-          
+
       - name: Install dependencies
         run: |
-          cd my-blog
           yarn install
-          
-      - name: Build my-blog
+
+      - name: Build Project
         run: |
-          cd my-blog
           yarn build
 
       # - name: Setup Pages
@@ -41,9 +38,7 @@ jobs:
       - name: Upload artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
-        with:
-          path: my-blog/build
-  
+
   deploy:
     environment:
       name: github-pages
