@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from './page.module.css';
 import ko from '@/locales/ko';
 
 export default function Projects() {

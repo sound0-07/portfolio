@@ -1,5 +1,5 @@
 import styles from './Footer.module.css';
-import ko from "@/locales/ko";
+import ko from '@/locales/ko';
 
 const Footer = () => {
   return (
