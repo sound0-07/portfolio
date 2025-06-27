@@ -15,8 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Sound',
+  title: {
+    default: 'Sound',
+    template: '%s | Sound',
+  },
   description: 'Sound Blog',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({

@@ -17,3 +17,9 @@
 	align-items: center;
 	gap: 10px;
 }
+
+.nav a:hover {
+	color: var(--tertiary);
+	text-decoration: underline;
+	font-weight: bold;
+}
