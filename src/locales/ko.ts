@@ -1,6 +1,7 @@
 export default {
 	home: {
-		title: '안녕하세요😆\n 프론트엔드 개발자 한솔입니다.',
+		//title: '안녕하세요😆\n 프론트엔드 개발자 한솔입니다.',
+		title: '안녕하세요😆',
 	},
 	header: {
 		home: '홈',
@@ -17,7 +18,8 @@ export default {
 	about: {
 		title: '소개',
 		overview: {
-			title: '3년간 개발 근무 경험',
+			//title: '3년간 개발 근무 경험',
+			title: '소개',
 			description:
 				'게임 개발 업무를 진행하다가 현재는 프론트엔드 개발자로 일하고 있습니다.',
 			button: '자세히 보기',

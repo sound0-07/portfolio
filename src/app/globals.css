@@ -8,6 +8,7 @@
 	--quaternary: #285430;
 
 	--header-height: 50px;
+	--header-z-index: 1000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,4 +48,18 @@ a {
 	html {
 		color-scheme: dark;
 	}
+}
+
+button {
+	background-color: transparent;
+	color: var(--foreground);
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:disabled {
+	pointer-events: none;
 }

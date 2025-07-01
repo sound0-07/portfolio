@@ -14,11 +14,11 @@ const Overview = () => {
   }
 
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
       <h1>{ko.contact.overview.title}</h1>
       <p>{ko.contact.overview.description}</p>
       <PrimaryButton text={ko.contact.overview.button} onClick={handleClick} />
-    </section>
+    </div>
   )
 }
 

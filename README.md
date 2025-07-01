@@ -12,6 +12,7 @@
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [CSS Modules](https://github.com/css-modules/css-modules)
+- **Animation**: [Motion](https://motion.dev/)
 
 ## 📁 프로젝트 구조
 
@@ -53,3 +54,4 @@
 브라우저에서 [http://localhost:3000](http://localhost:3000)으로 접속하여 결과를 확인하세요.
 
 <!-- 참고 [Color Palette](https://www.colorhunt.co/palette/e5d9b6a4be7b5f8d4e285430) -->
+<!-- 참고 [icon](https://lineicons.com/) -->
