@@ -1,16 +1,18 @@
 'use client';
 
-import { useEffect, useState } from "react";
 import styles from "./ScrollToTopButton.module.css";
-import ChevronUpIcon from "/public/chevron-up.svg";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useScroll } from "motion/react";
+import ChevronUpIcon from "/public/chevron-up.svg";
 
 const ScrollToTopButton = () => {
+  const { scrollYProgress } = useScroll();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 100);
+      setIsVisible(scrollYProgress.get() > 0.9);
     }
 
     window.addEventListener("scroll", handleScroll);
@@ -22,8 +24,10 @@ const ScrollToTopButton = () => {
   }
 
   return (
-    <button className={styles.scrollToTopButton} onClick={scrollToTop}>
-      <Image src={ChevronUpIcon} alt="chevron-up" width={24} height={24} />
+    isVisible && <button className={styles.scrollToTopButton} onClick={scrollToTop}>
+      <div className={styles.icon}>
+        <Image src={ChevronUpIcon} alt="chevron-up" fill />
+      </div>
     </button>
   )
 }
