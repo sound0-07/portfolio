@@ -1,20 +1,42 @@
-import Link from 'next/link';
+'use client';
 import styles from './Header.module.css';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import ko from '@/locales/ko';
 import routeData from '@/data/route';
+const { home, about, projects, contact } = routeData;
+const navList = [
+  {
+    name: ko.header.home,
+    href: home,
+  },
+  {
+    name: ko.header.about,
+    href: about,
+  },
+  {
+    name: ko.header.projects,
+    href: projects,
+  },
+  {
+    name: ko.header.contact,
+    href: contact,
+  },
+];
 
 interface HeaderProps {
   className?: string;
 }
 
 const Header = ({ className }: HeaderProps) => {
+  const pathname = usePathname();
+
   return (
     <header className={`${styles.container} ${className}`}>
       <div className={styles.nav}>
-        <Link href={routeData.home}>{ko.header.home}</Link>
-        <Link href={routeData.about}>{ko.header.about}</Link>
-        <Link href={routeData.projects}>{ko.header.projects}</Link>
-        <Link href={routeData.contact}>{ko.header.contact}</Link>
+        {navList.map((item) => (
+          <Link href={item.href} key={item.href} className={pathname === item.href ? styles.active : ''}>{item.name}</Link>
+        ))}
       </div>
     </header>
   )
