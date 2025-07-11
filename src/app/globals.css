@@ -2,10 +2,13 @@
 	--background: #ffffff;
 	--foreground: #171717;
 
-	--primary: #000000;
-	--secondary: #ffffff;
+	--primary: #e5d9b6;
+	--secondary: #a4be7b;
+	--tertiary: #5f8d4e;
+	--quaternary: #285430;
 
 	--header-height: 50px;
+	--header-z-index: 1000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,4 +48,18 @@ a {
 	html {
 		color-scheme: dark;
 	}
+}
+
+button {
+	background-color: transparent;
+	color: var(--foreground);
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:disabled {
+	pointer-events: none;
 }

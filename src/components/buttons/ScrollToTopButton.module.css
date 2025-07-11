@@ -1,0 +1,10 @@
+.scrollToTopButton {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+
+.scrollToTopButton .icon {
+	width: 40px;
+	height: 40px;
+}
