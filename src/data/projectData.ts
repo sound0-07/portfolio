@@ -1,7 +1,10 @@
 export const projectInfo = [
 	{
 		id: 'ifland-playitem',
-		date: '2022.07',
+		date: {
+			year: '2022',
+			month: '07',
+		},
 		name: 'ifland',
 		subName: 'Playitem',
 		company: 'SKT',
@@ -9,7 +12,10 @@ export const projectInfo = [
 	},
 	{
 		id: 'ifland-standAlone',
-		date: '2023.04',
+		date: {
+			year: '2023',
+			month: '04',
+		},
 		name: 'ifland',
 		subName: 'StandAlone',
 		company: 'SKT',
@@ -17,7 +23,10 @@ export const projectInfo = [
 	},
 	{
 		id: 'ifland-aiNPC',
-		date: '2023.11',
+		date: {
+			year: '2023',
+			month: '11',
+		},
 		name: 'ifland',
 		subName: 'AI NPC',
 		company: 'SKT',
@@ -25,7 +34,10 @@ export const projectInfo = [
 	},
 	{
 		id: 'samsung-galaxyS25',
-		date: '2024.10',
+		date: {
+			year: '2024',
+			month: '10',
+		},
 		name: 'Samsung',
 		subName: 'Galaxy S25 Global Unpacked 체험 웹사이트',
 		company: 'Samsung',
@@ -33,7 +45,10 @@ export const projectInfo = [
 	},
 	{
 		id: 'morph-homepage',
-		date: '2025.03',
+		date: {
+			year: '2025',
+			month: '03',
+		},
 		name: 'Morph',
 		subName: '회사 홈페이지 리뉴얼',
 		company: 'Morph',
@@ -41,7 +56,10 @@ export const projectInfo = [
 	},
 	{
 		id: 'morph-webGame',
-		date: '2025.04',
+		date: {
+			year: '2025',
+			month: '04',
+		},
 		name: 'Morph',
 		subName: 'Web Game',
 		company: 'Morph',
@@ -49,7 +67,10 @@ export const projectInfo = [
 	},
 	{
 		id: 'morph-widgetCanvas',
-		date: '2025.05',
+		date: {
+			year: '2025',
+			month: '05',
+		},
 		name: 'Morph',
 		subName: 'Widget Canvas',
 		company: 'Morph',
@@ -57,7 +78,10 @@ export const projectInfo = [
 	},
 	{
 		id: 'samsung-galaxyZ7',
-		date: '2025.06',
+		date: {
+			year: '2025',
+			month: '06',
+		},
 		name: 'Samsung',
 		subName: 'Galaxy Z Fold7 | Z Flip7 한국 Unpacked 체험 웹서비스',
 		company: 'Samsung',

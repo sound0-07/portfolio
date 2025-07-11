@@ -1,5 +1,4 @@
 'use client';
-
 import styles from "./ScrollToTopButton.module.css";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -26,7 +25,7 @@ const ScrollToTopButton = () => {
   return (
     isVisible && <button className={styles.scrollToTopButton} onClick={scrollToTop}>
       <div className={styles.icon}>
-        <Image src={ChevronUpIcon} alt="chevron-up" fill />
+        <Image src={ChevronUpIcon} alt="chevron-up" fill style={{ position: 'absolute' }} />
       </div>
     </button>
   )

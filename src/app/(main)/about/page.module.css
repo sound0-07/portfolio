@@ -9,7 +9,7 @@
 .contentContainer {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 50px;
 	padding: 20px 10px;
 	max-width: 500px;
 }

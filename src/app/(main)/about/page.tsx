@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import styles from './page.module.css';
-import ko from '@/locales/ko';
 import History from '@/containers/about/History';
 import Skill from '@/containers/about/Skill';
 import Certificate from '@/containers/about/Certificate';
