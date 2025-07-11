@@ -5,3 +5,11 @@
 	justify-items: center;
 	padding-top: var(--header-height);
 }
+
+.contentContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 20px 10px;
+	max-width: 500px;
+}
