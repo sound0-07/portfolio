@@ -1,0 +1,10 @@
+.skillList {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.skillItem {
+	display: flex;
+	flex-direction: column;
+}

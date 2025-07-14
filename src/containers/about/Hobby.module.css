@@ -1,0 +1,10 @@
+.hobbyList {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.hobbyItem {
+	display: flex;
+	flex-direction: column;
+}
