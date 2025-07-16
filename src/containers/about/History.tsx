@@ -6,6 +6,14 @@ const History = () => {
   return (
     <section className={styles.history}>
       <h1>{content.title}</h1>
+      <div className={styles.companyList}>
+        {content.company.map((item, index) => (
+          <div key={index} className={styles.companyItem}>
+            <h2>{item.name}</h2>
+            <p>{item.date}</p>
+          </div>
+        ))}
+      </div>
       <div className={styles.timeline}>
         {content.timeline.map((item, index) => (
           <div key={index} className={styles.timelineItem}>

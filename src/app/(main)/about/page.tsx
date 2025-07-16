@@ -11,13 +11,11 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className={styles.main}>
-      <div className={styles.contentContainer}>
-        <History />
-        <Skill />
-        <Certificate />
-        <Hobby />
-      </div>
-    </main>
+    <div className={styles.container}>
+      <History />
+      <Skill />
+      <Certificate />
+      <Hobby />
+    </div>
   );
 }

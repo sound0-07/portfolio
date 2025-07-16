@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Footer.module.css';
 import ko from '@/locales/ko';
 
@@ -9,6 +10,7 @@ const Footer = () => {
         <span>{ko.footer.email}: <a href={`mailto:${ko.info.email}`}>{ko.info.email}</a></span>
         <span>{ko.footer.phone}: <a href={`tel:${ko.info.phone}`}>{ko.info.phone}</a></span>
         <span>{ko.footer.address}: {ko.info.address}</span>
+        <span>{ko.footer.url}: <Link href={ko.info.url} target='_blank'>{ko.info.url}</Link></span>
       </div>
       <div className={styles.divider} />
       <span>{ko.footer.copyright}</span>
